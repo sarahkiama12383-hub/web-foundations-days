@@ -1,0 +1,115 @@
+/* 1. Reset and base body styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f2f5; /* Light background to make white cards visible */
+}
+
+/* 2 & 3. Header and Navigation styles (Flexbox, centered, 16px gap, white text, no underline) */
+header {
+  background-color: #333;
+  padding: 24px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.7; /* Visible hover style */
+}
+
+/* 4. Centered <main> and white card <section> */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background-color: lightgray;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds the "card look" */
+}
+
+/* 5. Features list grid (Responsive cards) */
+ul.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.features li {
+  background-color: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* 6. Shortcuts table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 12px;
+}
+
+/* 6. Feedback form fields (Stacked vertically, full width) */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+/* 7. Button hover effects and transitions */
+button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 8. Media query for small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 12px;
+  }
+  
+  header h1 {
+    font-size: 1.2rem; /* Reduces header font size */
+  }
+}
