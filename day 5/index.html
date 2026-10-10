@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Directory</title>
+  <!-- Load users.js using the defer attribute as required -->
+  <script src="users.js" defer></script>
+</head>
+<body>
+  <h1>User Directory</h1>
+
+  <!-- Button to trigger loading user data -->
+  <button id="load-users">Load Users</button>
+
+  <!-- Input box to filter users dynamically -->
+  <input type="text" id="filter-input" placeholder="Filter by name...">
+
+  <!-- Status paragraph for loading, success, and error messages -->
+  <p id="status"></p>
+
+  <!-- Unordered list to render user cards -->
+  <ul id="users-list"></ul>
+</body>
+</html>
