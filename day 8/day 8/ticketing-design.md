@@ -70,3 +70,8 @@ To ensure two people can never buy the same seat during a high-demand flash sale
 ---
 
 ## 6. Architecture Diagram & Component Explanation
+# Course Reflection
+
+Reflecting on this software engineering and system design journey, the most difficult concept for me to grasp initially was managing database concurrency and race conditions—specifically understanding how asynchronous API requests and multiple users hitting a server simultaneously can cause data collisions like double-booking. I overcame this challenge by breaking down backend workflows into smaller pieces, studying how atomic operations and Redis locks work, and practicing relational database design step-by-step through our labs.
+
+Based on feedback received during project reviews, I plan to improve my focus on writing cleaner code modularity, anticipating edge cases in API error handling, and detailing system diagrams completely. Moving forward, my next steps in learning are to dive deeper into backend framework development with Node.js and explore cloud deployment workflows to take my mobile-built applications into full production environments. This course has built a strong foundation in thinking like a professional software engineer.
