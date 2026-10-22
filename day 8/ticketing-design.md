@@ -70,8 +70,34 @@ To ensure two people can never buy the same seat during a high-demand flash sale
 ---
 
 ## 6. Architecture Diagram & Component Explanation
+
+```text
+[ Users / Mobile App ] 
+         |
+         v
+   [ Cloudflare CDN ]
+         |
+         v
+   [ Load Balancer (NGINX) ]
+         |
+         +------------------------+
+         |                        |
+         v                        v
+ [ App Servers ] <---> [ Redis (Seat Locks & Rate Limiting) ]
+         |
+         v
+ [ Primary Database (PostgreSQL with Write/Read Replicas) ]
+
 # Course Reflection
 
 Reflecting on this software engineering and system design journey, the most difficult concept for me to grasp initially was managing database concurrency and race conditions—specifically understanding how asynchronous API requests and multiple users hitting a server simultaneously can cause data collisions like double-booking. I overcame this challenge by breaking down backend workflows into smaller pieces, studying how atomic operations and Redis locks work, and practicing relational database design step-by-step through our labs.
 
 Based on feedback received during project reviews, I plan to improve my focus on writing cleaner code modularity, anticipating edge cases in API error handling, and detailing system diagrams completely. Moving forward, my next steps in learning are to dive deeper into backend framework development with Node.js and explore cloud deployment workflows to take my mobile-built applications into full production environments. This course has built a strong foundation in thinking like a professional software engineer.
+
+---
+
+### How to Update It in Spck Editor:
+1. Open your **`web-foundations-days`** repository in Spck Editor.
+2. Go to the **`day8/`** folder and open **`ticketing-design.md`**[span_10](start_span)[span_10](end_span).
+3. Ensure Section 6 has the diagram above, and make sure Section 7 includes your trade-offs (like holding seats versus user abandonment)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span).
+4. Open your Git panel, stage the file, commit with the message **`Day 8 assignment`**, and push it straight to GitHub[span_13](start_span)[span_13](end_span)! You are right on the home stretch!
